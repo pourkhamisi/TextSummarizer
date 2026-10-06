@@ -28,6 +28,15 @@ Step 2: Implementing logging ....> src/textSummerizer/logging/__init__.py
 
 Step 3: Implementing utility functions ....> src/textSummerizer/utils/common.py
 
+Step 4: TextSummerizer using Huggingface
+### Workflows
+1. config.yaml
+2. params.yaml
+3. Config entity
+4. Configuration manager
+5. Update components--> Data Ingestion, Data Transformation, Model Trainer
+6. Create pipeline --> Training pipeline, Prediction pipeline
+7. Front end 
 
 
 

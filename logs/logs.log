@@ -1,1 +1,6 @@
 
+[2026-10-06 20:57:57,765:  INFO - common - yaml file: config/config.yaml loaded successfully]
+[2026-10-06 20:57:57,766:  INFO - common - yaml file: params.yaml loaded successfully]
+[2026-10-06 21:02:06,269:  INFO - common - yaml file: config/config.yaml loaded successfully]
+[2026-10-06 21:02:06,271:  INFO - common - yaml file: params.yaml loaded successfully]
+[2026-10-06 21:02:06,271:  INFO - common - Directory created at: artifacts]
