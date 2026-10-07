@@ -1,6 +1,6 @@
 from src.textSummerizer.constants import *
 from src.textSummerizer.utils.common import read_yaml, create_directories
-from src.textSummerizer.entity import DataIngestionConfig, DataTransformationconfig
+from src.textSummerizer.entity import DataIngestionConfig, DataTransformationconfig, ModelTrainerconfig
 
 class configurationManager:
     def __init__(self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH):
@@ -35,3 +35,25 @@ class configurationManager:
             )
     
             return data_transformation_config
+
+    def get_model_trainer_config(self) -> ModelTrainerconfig:
+            config = self.config.model_trainer
+            params = self.params.TrainingArguments
+    
+            create_directories([config.root_dir])
+    
+            model_trainer_config = ModelTrainerconfig(
+                root_dir=Path(config.root_dir),
+                data_path=Path(config.data_path),
+                model_name=Path(config.model_name),
+                output_dir=Path(config.output_dir),
+                evaluation_strategy=params.evaluation_strategy,
+                save_strategy=params.save_strategy,
+                learning_rate=params.learning_rate,
+                per_device_train_batch_size=params.per_device_train_batch_size,
+                per_device_eval_batch_size=params.per_device_eval_batch_size,
+                num_train_epochs=params.num_train_epochs,
+                weight_decay=params.weight_decay
+            )   
+    
+            return model_trainer_config

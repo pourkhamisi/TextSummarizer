@@ -2,3 +2,11 @@ pandas
 python-box
 PyYAML
 ensure
+transformers
+transformers[sentencepiece]
+datasets
+nltk
+tqdm
+torch
+matplotlib
+fastapi
